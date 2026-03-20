@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Comissão</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- coluna esquer -->
+        <div class="col">
+
+            <div class="card-box">
+                <h3>Cadastrar Vendedor</h3>
+                <input id="nome" placeholder="Nome">
+                <input id="comissao" placeholder="% Comissão" type="number">
+                <button class="btn-add" onclick="cadastrar()">Cadastrar</button>
+            </div>
+
+            <div class="card-box">
+                <h3>Registrar Venda</h3>
+
+                <select id="vendedor"></select>
+                <input id="valor" placeholder="Valor da venda" type="number">
+
+                <button class="btn-add" onclick="vender()">Registrar</button>
+            </div>
+
+            <div class="card-box">
+                <h3>Meta do Dia</h3>
+
+                <input type="number" id="meta" placeholder="Meta diária (R$)">
+                <button class="btn-add" onclick="salvarMeta()">Salvar Meta</button>
+
+                <div id="metaStatus"></div>
+            </div>
+        </div>
+
+        <!-- coluna mei -->
+        <div class="col">
+            <div class="card-box">
+                <h2>Vendedores</h2>
+                <div id="resultado"></div>
+            </div>
+        </div>
+
+        <!--coluna direita-->
+        <div class="col">
+            <div class="card-box">
+                <h2>Total Geral</h2>
+                <div id="geral"></div>
+            </div>
+
+            <div class="card-box">
+                <h3>Histórico por Dia</h3>
+
+                <input type="date" id="dataFiltro" onchange="filtrarPorData()">
+
+                <div id="historico"></div>
+            </div>
+
+        </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
